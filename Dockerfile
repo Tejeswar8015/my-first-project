@@ -1,7 +1,8 @@
-FROM python:3.10
+FROM python:3
 
 WORKDIR /app
-
 COPY . .
 
-CMD ["python", "index.html"]
+EXPOSE 5000
+
+CMD ["python3", "-m", "http.server", "5000"]
